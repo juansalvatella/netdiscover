@@ -26,5 +26,5 @@ func azurePublicIPv4() (net.IP, error) {
 }
 
 func azureHostname() (string, error) {
-	return StandardHostnameFromHTTP(gcpHostnameURL, map[string]string{"Metadata-Flavor": "Google"})
+	return "", nil
 }

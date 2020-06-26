@@ -56,7 +56,7 @@ func main() {
 	case "gcp":
 		discoverer = discover.NewGCPDiscoverer()
 	default:
-		discoverer = discover.NewDiscoverer()
+		discoverer = discover.NewAzureDiscoverer()
 	}
 
 	if retField != "" {

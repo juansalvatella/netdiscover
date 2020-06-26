@@ -14,6 +14,7 @@ func NewAzureDiscoverer() Discoverer {
 	return NewDiscoverer(
 		PrivateIPv4DiscovererOption(azurePrivateIPv4),
 		PublicIPv4DiscovererOption(azurePublicIPv4),
+		PublicHostnameDiscovererOption(azureHostname)
 	)
 }
 

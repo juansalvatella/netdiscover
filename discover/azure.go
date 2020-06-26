@@ -24,3 +24,7 @@ func azurePrivateIPv4() (net.IP, error) {
 func azurePublicIPv4() (net.IP, error) {
 	return StandardIPFromHTTP(azurePublicIPv4URL, map[string]string{"Metadata": "true"})
 }
+
+func azureHostname() (string, error) {
+	return StandardHostnameFromHTTP(gcpHostnameURL, map[string]string{"Metadata-Flavor": "Google"})
+}
